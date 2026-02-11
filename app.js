@@ -1,10 +1,10 @@
 // ================== CONFIG ==================
 // 1) Reemplace por su número en formato internacional SIN +, sin 0 y sin espacios.
 // Argentina ejemplo: 5493512345678
-const WHATSAPP_NUMBER = "5493512345678";
+const WHATSAPP_NUMBER = "5493426273926";
 
 // 2) Nombre del negocio (sale en el mensaje)
-const STORE_NAME = "Mi Tienda";
+const STORE_NAME = "CocoaLabarraca";
 
 // 3) Moneda
 const CURRENCY = "ARS";
