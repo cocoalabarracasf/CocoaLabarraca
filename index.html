@@ -1,12 +1,57 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Catálogo</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>GitHub Pages funcionando</h1>
-  <p>Luego reemplazo por el catálogo.</p>
+  <header class="topbar">
+    <h1 class="brand">Catálogo</h1>
+    <button id="openCartBtn" class="cart-btn">
+      Carrito (<span id="cartCount">0</span>)
+    </button>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <input id="searchInput" type="search" placeholder="Buscar (nombre o código)..." />
+      <select id="categorySelect">
+        <option value="all">Todas las categorías</option>
+      </select>
+    </section>
+
+    <section id="productGrid" class="grid"></section>
+  </main>
+
+  <!-- Carrito -->
+  <aside id="cartDrawer" class="drawer" aria-hidden="true">
+    <div class="drawer-header">
+      <h2>Carrito</h2>
+      <button id="closeCartBtn" class="ghost">Cerrar</button>
+    </div>
+
+    <div id="cartItems" class="cart-items"></div>
+
+    <div class="cart-footer">
+      <div class="totals">
+        <div>Total</div>
+        <div id="cartTotal">$0</div>
+      </div>
+
+      <label class="note">
+        Nota (talle/color/envío)
+        <textarea id="customerNote" rows="3" placeholder="Ej: Remera negra talle M / Envío a ..."></textarea>
+      </label>
+
+      <button id="checkoutBtn" class="primary">Finalizar por WhatsApp</button>
+      <p class="hint">Se abrirá WhatsApp con el pedido listo para enviar.</p>
+    </div>
+  </aside>
+
+  <div id="backdrop" class="backdrop" hidden></div>
+
+  <script src="app.js"></script>
 </body>
 </html>
